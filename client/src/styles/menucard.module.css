@@ -1,0 +1,30 @@
+.menu {
+  position: absolute;
+  right: 19px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  filter: drop-shadow(0px 0px 1px #5f5f5fba);
+  z-index: 1;
+}
+:global(#light) .menu {
+  filter: drop-shadow(0px 0px 1px #808080b5);
+}
+.button {
+  font-weight: 500;
+  color: #828fa3;
+  background-color: #20212c;
+  font-size: 1rem;
+  padding: 0.7rem 1.2rem;
+  white-space: nowrap;
+}
+:global(#light) .button {
+  background-color: white;
+}
+.button:hover {
+  background-color: #343544;
+}
+.dangerBtn {
+  color: red;
+}

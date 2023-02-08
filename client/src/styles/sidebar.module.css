@@ -1,0 +1,113 @@
+.sidebar {
+  background-color: #2b2c37;
+  padding: 1.1rem 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 18.5rem;
+}
+:global(#light) .sidebar {
+  background-color: white;
+}
+.header {
+  color: #828fa3;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.13rem;
+  margin-bottom: 0.9rem;
+  padding-left: 1.8rem;
+}
+.tabs {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.tab,
+.addTabBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  padding-left: 1.8rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  color: #828fa3;
+}
+.tab {
+  padding-right: 1.2rem;
+}
+.tab > svg {
+  flex-shrink: 0;
+}
+.tab:hover:not(.activeTab) {
+  background-color: #7471d2;
+  color: white;
+}
+.activeTab {
+  color: white;
+  background-color: #635fc7;
+}
+.activeTab > svg > path {
+  fill: white;
+}
+.tab > svg > path {
+  transition: 0.2s;
+}
+.tab:hover > svg > path {
+  fill: white;
+}
+.tabTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  word-break: break-word;
+}
+.addTabBtn {
+  color: #635fc7;
+}
+.addTabBtn:hover {
+  color: #4a4892;
+}
+.addTabBtn > svg > path {
+  transition: 0.2s;
+  fill: #635fc7;
+}
+.addTabBtn:hover > svg > path {
+  fill: #4a4892;
+}
+.theme {
+  background-color: #20212c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto auto 1rem auto;
+  padding: 0.8rem 0;
+  border-radius: 0.3rem;
+  gap: 1.2rem;
+}
+:global(#light) .theme {
+  background-color: #f4f7fd;
+}
+.themeSlider {
+  width: 45px;
+  height: 20px;
+  background-color: #635fc7;
+  border-radius: 2rem;
+  display: flex;
+  padding: 0.2rem;
+  position: relative;
+}
+.themeSlider::before {
+  transition: 0.2s;
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  background-color: white;
+  border-radius: 50%;
+  left: 0.2rem;
+}
+.themeSliderOn::before {
+  left: calc(100% - 0.2rem - 14px);
+}

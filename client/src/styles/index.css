@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+#dark *::-webkit-scrollbar-track {
+  background: #16171f;
+  border-radius: 20px;
+}
+#dark *::-webkit-scrollbar-thumb {
+  transition: 0.2s;
+  background-color: #3e3f4e;
+  border-radius: 20px;
+}
+#light *::-webkit-scrollbar-track {
+  background: #aaacb1;
+  border-radius: 20px;
+}
+#light *::-webkit-scrollbar-thumb {
+  transition: 0.2s;
+  background-color: #828fa3;
+  border-radius: 20px;
+}
+#light *::-webkit-scrollbar-thumb:hover,
+#dark *::-webkit-scrollbar-thumb:hover {
+  background-color: #635fc7;
+}
+.root {
+  display: flex;
+  flex-direction: column;
+  background-color: #3e3f4e;
+  height: 100vh;
+  width: 100vw;
+  gap: 1px;
+  overflow: hidden;
+  position: relative;
+}
+#light {
+  background-color: #e5eeff;
+}
+header {
+  display: flex;
+  gap: 1px;
+}
+main {
+  display: flex;
+  overflow: hidden;
+  gap: 1px;
+  flex-grow: 1;
+}
+button {
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  outline: none;
+}
+input,
+textarea {
+  transition: 0.2s;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+textarea {
+  resize: none;
+}

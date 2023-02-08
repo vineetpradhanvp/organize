@@ -1,0 +1,73 @@
+.board {
+  background-color: #20212c;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  flex-grow: 1;
+}
+:global(#light) .board {
+  background-color: #f4f7fd;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  width: 30%;
+}
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  height: fit-content;
+}
+.titleBall {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.titleText {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #828fa3;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  overflow: auto;
+}
+.card {
+  transition: 0.2s;
+  background-color: #2b2c37;
+  padding: 1.3rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.062);
+}
+:global(#light) .card {
+  background-color: white;
+}
+.card:hover {
+  opacity: 0.5;
+}
+.cardTitle {
+  font-weight: 600;
+  font-size: 0.98rem;
+  word-break: break-word;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: white;
+}
+:global(#light) .cardTitle {
+  color: black;
+}
+.cardFooter {
+  color: #828fa3;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

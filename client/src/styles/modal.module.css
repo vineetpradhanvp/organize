@@ -1,0 +1,213 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal {
+  background-color: #2b2c37;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: min(90%, 450px);
+  max-height: 90vh;
+}
+:global(#light) .modal {
+  background-color: white;
+  color: black;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: -webkit-box;
+  overflow: auto;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  word-break: break-word;
+}
+.title::-webkit-scrollbar,
+.description::-webkit-scrollbar {
+  width: 2px;
+}
+.headerIconWrapper {
+  align-self: flex-start;
+  position: relative;
+}
+.headerIcon {
+  color: #828fa3;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.headerIcon:hover {
+  background-color: rgba(255, 255, 255, 0.135);
+}
+.description {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #828fa3;
+  display: -webkit-box;
+  overflow: auto;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  word-break: break-word;
+  margin-top: -13px;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.label {
+  font-size: 0.85em;
+  font-weight: 600;
+}
+.input {
+  border: 2px solid #828fa3;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  flex-grow: 1;
+}
+.inputError {
+  border: 2px solid red;
+}
+:global(#light) .input {
+  color: black;
+}
+.input:focus-visible {
+  border: 2px solid #635fc7;
+}
+.submitBtn {
+  background-color: #635fc7;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.8rem 0;
+  border-radius: 2rem;
+  font-weight: 600;
+}
+.submitBtn:hover {
+  background-color: #7471d2;
+}
+.subTasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  overflow: auto;
+  max-height: 163px;
+}
+/* max-height: 260px; */
+.subTasks::-webkit-scrollbar {
+  width: 4px;
+}
+.subTaskInput {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.removeSubTaskBtn {
+  font-size: 1.4rem;
+  color: #828fa3;
+}
+.addSubTaskBtn {
+  background-color: white;
+  color: #635fc7;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.addSubTaskBtn:hover {
+  background-color: lightgray;
+}
+.subTask {
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #20212c;
+  border-radius: 0.4rem;
+  display: flex;
+  padding: 0.9rem;
+}
+.subTask:hover {
+  background-color: rgb(57 57 91);
+}
+:global(#light) .subTask {
+  background-color: #f4f7fd;
+}
+:global(#light) .subTask:hover {
+  background-color: rgba(99, 95, 199, 0.25);
+}
+.subTaskTitle {
+  transition: 0.2s;
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: relative;
+  color: white;
+}
+:global(#light) .subTaskTitle {
+  color: black;
+}
+.subTaskTitle::before {
+  content: "";
+  position: absolute;
+  transition: 0.2s;
+  width: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  background-color: white;
+}
+:global(#light) .subTaskTitle::before {
+  background-color: black;
+}
+.subTaskTitleStriked {
+  color: rgba(255, 255, 255, 0.5);
+}
+:global(#light) .subTaskTitleStriked {
+  color: rgba(0, 0, 0, 0.5);
+}
+.subTaskTitleStriked::before {
+  width: 100%;
+}
+.checkbox {
+  transition: 0.2s;
+  height: 20px;
+  width: 20px;
+  background-color: #2b2c37;
+  border-radius: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+:global(#light) .checkbox:not(.checkboxChecked) {
+  background-color: white;
+}
+.checkbox::before {
+  transition: 0.2s;
+  content: "check";
+  font-size: 1rem;
+  transform: scale(0);
+}
+.checkboxChecked {
+  background-color: #635fc7;
+  color: white;
+}
+.checkboxChecked::before {
+  content: "check";
+  font-size: 1rem;
+  transform: scale(1);
+}
