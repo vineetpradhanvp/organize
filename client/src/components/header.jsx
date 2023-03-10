@@ -59,6 +59,12 @@ export default function Header() {
         <span className={styles.appName}>organize</span>
       </div>
       <div className={styles.headerRight}>
+        <img
+          src="/logo.svg"
+          alt=""
+          className={styles.logo}
+          onClick={() => dispatch(setShowSidebar())}
+        />
         <span className={styles.title}>{getBoard.data?.name}</span>
         {activeTab ? (
           <button
@@ -67,9 +73,7 @@ export default function Header() {
               dispatch(setNewTaskModal(1));
               e.stopPropagation();
             }}
-          >
-            Add New Task
-          </button>
+          ></button>
         ) : null}
 
         <div className={styles.menu} ref={menuRef}>

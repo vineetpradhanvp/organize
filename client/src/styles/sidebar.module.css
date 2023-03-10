@@ -111,3 +111,11 @@
 .themeSliderOn::before {
   left: calc(100% - 0.2rem - 14px);
 }
+
+@media (width<950px) {
+  .sidebar {
+    position: absolute;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}

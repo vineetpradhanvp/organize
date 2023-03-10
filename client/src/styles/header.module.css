@@ -53,6 +53,9 @@
   position: relative;
   flex-shrink: 0;
 }
+.addTaskBtn::before {
+  content: "Add New Task";
+}
 .addTaskBtn:hover {
   background-color: #7471d2;
 }
@@ -66,4 +69,26 @@
 }
 :global(#light) .menuBtn:hover {
   background-color: rgba(0, 0, 0, 0.135);
+}
+@media (width<850px) {
+  .headerLeft {
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (width>=850px) {
+  .headerRight > .logo {
+    display: none;
+  }
+}
+@media (width<=550px) {
+  .addTaskBtn::before {
+    content: "+";
+    font-size: 1.5rem;
+    line-height: 0.7em;
+  }
+  .addTaskBtn {
+    padding: 0.78rem 1.7rem;
+  }
 }

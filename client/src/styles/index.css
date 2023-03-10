@@ -71,3 +71,9 @@ textarea {
 textarea {
   resize: none;
 }
+@media (width<950px) {
+  main {
+    overflow: auto;
+    position: relative;
+  }
+}
